@@ -29,6 +29,7 @@ require('lazy').setup {
   require 'plugins.misc',
   require 'plugins.comment',
   require 'plugins.undotree',
+  require 'plugins.wilder',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
