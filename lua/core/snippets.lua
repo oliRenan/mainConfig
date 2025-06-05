@@ -34,3 +34,25 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
+function WrapWithHtmlTag()
+  -- Pede a tag
+  local tag = vim.fn.input 'Tag HTML: '
+  if tag == '' then
+    return
+  end
+
+  -- Pega o conteúdo da seleção visual
+  local start_pos = vim.fn.getpos "'<"
+  local end_pos = vim.fn.getpos "'>"
+
+  local bufnr = vim.api.nvim_get_current_buf()
+  local lines = vim.api.nvim_buf_get_lines(bufnr, start_pos[2] - 1, end_pos[2], false)
+
+  -- Adiciona as tags
+  lines[1] = lines[1]:sub(1, start_pos[3] - 1) .. '<' .. tag .. '>' .. lines[1]:sub(start_pos[3])
+  lines[#lines] = lines[#lines]:sub(1, end_pos[3]) .. '</' .. tag .. '>' .. lines[#lines]:sub(end_pos[3] + 1)
+
+  -- Substitui o texto selecionado
+  vim.api.nvim_buf_set_lines(bufnr, start_pos[2] - 1, end_pos[2], false, lines)
+end

@@ -55,3 +55,5 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('n', '<C-b>', function()
   vim.cmd 'NvimTreeToggle'
 end)
+
+vim.keymap.set('v', '<leader>w', ':WrapHtml<CR>', { noremap = true, silent = true })

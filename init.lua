@@ -11,8 +11,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     error('Error cloning lazy.nvim:\n' .. out)
   end
 end
-vim.opt.rtp:prepend(lazypath)
 
+vim.opt.rtp:prepend(lazypath)
+vim.api.nvim_create_user_command('WrapHtml', WrapWithHtmlTag, { range = true })
 -- Set up plugins
 require('lazy').setup {
   require 'plugins.nvim-tree',
