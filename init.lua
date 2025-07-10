@@ -17,9 +17,8 @@ vim.api.nvim_create_user_command('WrapHtml', WrapWithHtmlTag, { range = true })
 -- Set up plugins
 require('lazy').setup {
   require 'plugins.nvim-tree',
-  -- require 'plugins.colortheme',
+  require 'plugins.colortheme',
   require 'plugins.bufferline',
-  require 'plugins.miasma',
   require 'plugins.lualine',
   require 'plugins.treesitter',
   require 'plugins.telescope',

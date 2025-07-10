@@ -5,7 +5,7 @@ return {
     config = function()
       require('lualine').setup {
         options = {
-          theme = 'miasma',
+          theme = 'rose-pine',
         },
       }
     end,
