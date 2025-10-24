@@ -129,6 +129,7 @@ return {
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         ruff = {},
+        jdtls = {},
         pylsp = {
           settings = {
             pylsp = {

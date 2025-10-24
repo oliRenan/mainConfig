@@ -57,3 +57,5 @@ vim.keymap.set('n', '<C-b>', function()
 end)
 
 vim.keymap.set('v', '<leader>w', ':WrapHtml<CR>', { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>git', '<cmd>Neogit<CR>', { desc = 'Abrir Neogit' })

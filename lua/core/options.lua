@@ -29,7 +29,7 @@ vim.opt.isfname:append '@-@'
 vim.opt.updatetime = 50
 vim.opt.clipboard = 'unnamedplus'
 
-vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = '120'
 vim.cmd 'highlight ColorColumn ctermbg=0 guibg=#2c2c2c'
 
 vim.opt.textwidth = 180
