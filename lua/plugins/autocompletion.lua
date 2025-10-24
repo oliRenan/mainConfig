@@ -134,7 +134,7 @@ return { -- Autocompletion
         -- Select next/previous item with Tab / Shift + Tab
         ['<Tab>'] = cmp.mapping(function(fallback)
           if cmp.visible() then
-            cmp.select_next_item()
+            cmp.confirm { select = true }
           elseif luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
           else
