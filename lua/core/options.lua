@@ -33,3 +33,6 @@ vim.opt.colorcolumn = '120'
 vim.cmd 'highlight ColorColumn ctermbg=0 guibg=#2c2c2c'
 
 vim.opt.textwidth = 180
+
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }

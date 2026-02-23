@@ -33,6 +33,7 @@ require('lazy').setup {
   require 'plugins.undotree',
   require 'plugins.wilder',
   require 'plugins.neogit',
+  require 'plugins.auto-pairs',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
